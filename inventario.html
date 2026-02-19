@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventario de Tienda</title>
+    <link rel="stylesheet" href="css/inventario.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🏪 Sistema de Inventario</h1>
+        
+        <div class="input-group">
+            <input type="text" id="productoBuscado" placeholder="Buscar producto...">
+            <button class="btn-buscar" onclick="buscarProducto()">🔍 Buscar</button>
+            <button class="btn-stock" onclick="mostrarStockBajo()">📊 Stock Bajo</button>
+        </div>
+        
+        <div class="input-group">
+            <input type="text" id="nuevoProducto" placeholder="Nombre del producto">
+            <input type="number" id="cantidadProducto" placeholder="Cantidad" min="0">
+            <button onclick="agregarProducto()">➕ Agregar</button>
+        </div>
+        
+        <div id="mensaje"></div>
+        
+        <div class="results">
+            <h2>📋 Lista de Productos</h2>
+            <div id="tablaProductos"></div>
+        </div>
+    </div>
+<script src="js/inventario.js"></script>
+</body>
+</html>

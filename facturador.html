@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Facturacion en html</title>
+    <link rel="stylesheet" href="css/facturador.css">
+    
+</head>
+<body>
+             <button onclick="location.href='ingresofacturador.html'">Cerrar Sesión</button>
+    <main class="container"></main>
+    <h1>ingreso de articulos a Facturar</h1>
+    <div class="contenedor-principal">
+  <form id="f1" name="f1">
+    <input type="number" name="nf" id="nf" placeholder="Escriba Numero de Factura">
+    <input type="number" name="idc" id="idc" placeholder="Digite id del cliente">
+    <input type="text" name="nc" id="nc" placeholder="Digite nombre  del cliente">
+    <input type="number" name="cant" id="cant" placeholder="Digite cantidad del producto">
+    <input type="text" name="dp" id="dp" placeholder="Digite Descripcion del producto">
+    <input type="number" name="vu" id="vu" placeholder="Digite valor unitario">
+    <input type="button" id="benviar" name="benviar" value="Calcular" onclick="calculo()">
+  </form>
+ <div class="resultados" id="resultados">
+                <h2>Factura de Venta</h2>
+                <div id="factura"></div>
+            </div>
+        </div>
+        </div>
+ </main>
+  
+    <script src="js/facturador.js"></script>
+</body>
+</html>

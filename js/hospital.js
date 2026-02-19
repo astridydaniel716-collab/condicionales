@@ -1,4 +1,41 @@
-function nombrepaciente() {
+function nombrepte() {
+
+    let agregar = "si";
+    let pacientes = [];   // ← array para guardar nombres
+
+    while (agregar.toLowerCase() == "si") {
+
+        let nombre = prompt("Ingrese nombre del paciente");
+
+        if (nombre != null && nombre != "") {
+            pacientes.push(nombre);   // ← guarda en el array
+        } else {
+            alert("Debe ingresar un nombre válido");
+        }
+
+        agregar = prompt("¿Desea ingresar otro paciente? (si/no)");
+    }
+
+    // Mostrar resultados
+    let listado = "";
+
+    for (let i = 0; i < pacientes.length; i++) {
+        listado += (i + 1) + ". " + pacientes[i] + "\n";
+    }
+
+    alert("Fin de jornada\nTotal pacientes: " + pacientes.length + "\n\n" + listado);
+    
+    let eliminar= parseInt(prompt ("presiona 1 para eliminar el primer paciente o 2 para elominar el ultimo"));
+    if(eliminar == 1 ) {
+        pacientes.shift();
+    }
+    else {
+        pacientes.pop();
+    }
+    alert(pacientes)
+}
+// otra funcion 
+ function nombrepaciente() {
 
     let continuar = "si";
     let totalPacientes = 0;  // contador
@@ -28,7 +65,7 @@ function nombrepaciente() {
 
         continuar = prompt("¿Desea ingresar otro paciente? (si/no)");
 
-        listadop += `paciente:  ${nombre}  \n`;
+        listadop += "paciente:  ${nombre}  \n";
 
     }
 
